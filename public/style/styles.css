@@ -58,6 +58,7 @@ html {
     display: inline-block;
     font-size: 14px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 .textBtn {
     border: none;

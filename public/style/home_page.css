@@ -51,7 +51,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin: 8rem 0;
 }
 
 .headerTitle {
@@ -73,4 +73,29 @@ body {
 .headerLinks {
     display: flex;
     flex-direction: row;
+}
+
+.divider {
+    color: white;
+    width: 50rem;
+}
+
+.aboutMeSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 0;
+}
+
+.aboutMeTitle {
+    color: white;
+    font-size: 3rem;
+}
+
+.aboutMe {
+    color: white;
+    width: 40rem;
+    padding: 2.5rem 0;
+    font-size: 1.12rem;
 }

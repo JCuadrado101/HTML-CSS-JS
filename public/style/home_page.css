@@ -48,6 +48,7 @@ body {
 
 .header{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -85,7 +86,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 8rem 0;
+    padding: 7rem 0;
 }
 
 .aboutMeTitle {
@@ -96,6 +97,50 @@ body {
 .aboutMe {
     color: white;
     width: 40rem;
-    padding: 2.5rem 0;
+    padding: 2.5rem 1rem;
     font-size: 1.12rem;
+}
+
+.listTileContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3rem;
+    width: 45rem;
+}
+
+.listTileContainer > div {
+    margin: 1rem;
+}
+
+.listTileDescription {
+    width: 14rem;
+}
+
+.listTile {
+    background-color: white;
+    height: 5rem;
+    width: 20rem;
+    border-radius: 5px;
+}
+
+.listTile > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.listTile > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 10px;
+}
+
+.listTileTitle {
+    font-size: 20px;
+    padding-bottom: 2px;
+}
+
+.listTileDescription {
+    font-size: 14px;
 }

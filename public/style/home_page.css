@@ -4,25 +4,52 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
 body {
     background-color: RGB(31, 29, 29);
 }
 
-.nav {
-    height: 70px;
-    background: black;
+ /*NAVBAR*/
+
+.navbar {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 70px;
+    padding: 0 40px;
 }
 
-.nav > div {
-    width: 25%;
+.nav-links a {
+    color: white;
+    padding: 5px 14px;
+
+}
+
+.nav-links a:hover {
+    color: grey;
+}
+
+.menu {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-right: 80px;
+    gap: 1em;
+    font-size: 18px;
+}
+
+
+.link:hover {
+    color: red;
+    border-radius: 5px;
+    transition: 0.3s ease;
 }
 
 .btn {
@@ -40,10 +67,12 @@ body {
 }
 
 .squareLogo {
-    margin-top: 25px;
-    padding: 0;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
+    align-items: center;
+    align-content: center;
+    margin-top: 20px;
+    margin-left: -20px;
 }
 
 .header{
@@ -143,4 +172,57 @@ body {
 
 .listTileDescription {
     font-size: 14px;
+}
+
+
+/* DROPDOWN MENU */
+.services {
+    position: relative;
+}
+
+.services:hover .dropdown {
+    display: block;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 32px;
+    user-select: none;
+    color: white;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    .menu {
+        display:none;
+        position: absolute;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 15px;
+        background-color: black;
+        opacity: .8;
+        height: 100vh;
+    }
+    .menu li:hover {
+        display: inline-block;
+        background-color:#4c9e9e;
+        transition: 0.3s ease;
+    }
+    .menu li + li {
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+    .hamburger {
+        display: block;
+        margin-left: 20rem;
+    }
 }

@@ -4,25 +4,52 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
 body {
     background-color: RGB(31, 29, 29);
 }
 
-.nav {
-    height: 70px;
-    background: black;
+ /*NAVBAR*/
+
+.navbar {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 70px;
+    padding: 0 40px;
 }
 
-.nav > div {
-    width: 25%;
+.nav-links a {
+    color: white;
+    padding: 5px 14px;
+
+}
+
+.nav-links a:hover {
+    color: grey;
+}
+
+.menu {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-right: 80px;
+    gap: 1em;
+    font-size: 18px;
+}
+
+
+.link:hover {
+    color: red;
+    border-radius: 5px;
+    transition: 0.3s ease;
 }
 
 .btn {
@@ -39,15 +66,23 @@ body {
     color: RGB(71, 69, 69);
 }
 
+.links {
+    width: 50px;
+    margin: 40px;
+}
+
 .squareLogo {
-    margin-top: 25px;
-    padding: 0;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
+    align-items: center;
+    align-content: center;
+    margin-top: 20px;
+    margin-left: -20px;
 }
 
 .header{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -78,6 +113,7 @@ body {
 .divider {
     color: white;
     width: 50rem;
+    margin: 0 2rem;
 }
 
 .aboutMeSection {
@@ -85,7 +121,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 8rem 0;
+    padding: 7rem 0;
+    margin: 0 auto;
+    max-width: 50rem;
+
 }
 
 .aboutMeTitle {
@@ -95,7 +134,138 @@ body {
 
 .aboutMe {
     color: white;
-    width: 40rem;
-    padding: 2.5rem 0;
+    /*width: 40rem;*/
+    padding: 2.5rem 1rem;
     font-size: 1.12rem;
+    margin: 0 2rem;
+    text-wrap: normal;
+
+}
+
+.listTileContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 0 2rem;
+    /*width: 45rem;*/
+}
+
+.listTileContainer > div {
+    margin: 1rem;
+}
+
+.listTileDescription {
+    width: 14rem;
+}
+
+.listTile {
+    background-color: white;
+    height: 5rem;
+    width: 20rem;
+    border-radius: 5px;
+}
+
+.listTile > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.listTile > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 10px;
+}
+
+.listTileTitle {
+    font-size: 20px;
+    padding-bottom: 2px;
+}
+
+.listTileDescription {
+    font-size: 14px;
+}
+
+.myProjectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.project {
+    background-color: white;
+    height: 15rem;
+    width: 20rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+    background-color: black;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+}
+
+/* DROPDOWN MENU */
+.services {
+    position: relative;
+}
+
+.services:hover .dropdown {
+    display: block;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 32px;
+    user-select: none;
+    color: white;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    .menu {
+        display:none;
+        position: absolute;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 15px;
+        background-color: black;
+        opacity: .8;
+        height: 100vh;
+    }
+    .menu li:hover {
+        display: inline-block;
+        background-color:#4c9e9e;
+        transition: 0.3s ease;
+    }
+    .menu li + li {
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+    .hamburger {
+        display: block;
+        margin-left: 20rem;
+    }
 }
